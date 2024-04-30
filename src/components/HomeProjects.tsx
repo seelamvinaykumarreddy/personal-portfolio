@@ -36,7 +36,7 @@ export const products = [
   },
   {
     title: "Dashboard",
-    link: "https://editrix.ai",
+    link: "https://shoppy-dashboard-sync.netlify.app",
     thumbnail: "/courses/dashboard.png",
   },
   {
