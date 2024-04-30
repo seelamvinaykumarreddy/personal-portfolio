@@ -38,7 +38,7 @@
       "description": "React and Sync Fusion admin dashboard site for sales reports and sub pages with category filtering systems",
       "github": "",
       "livelink": "https://shoppy-dashboard-sync.netlify.app",
-      "isFeatured": false,
+      "isFeatured": true,
       "image": "/courses/dashboard.png"
     },
     
@@ -48,7 +48,7 @@
       "slug": "Food recipe site",
       "description": "Javascript based food recipe Web Application using API and MVC Architecture",
       "github": "",
-      "livelink": "",
+      "livelink": "https://forkifycooks.netlify.app",
       "isFeatured": true,
       "image": "/courses/foodify.png"
     }

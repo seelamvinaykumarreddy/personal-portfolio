@@ -5,33 +5,33 @@ import { HeroParallax } from "./ui/hero-parallax";
 export const products = [
   {
     title: "Foodify",
-    link: "https://gomoonbeam.com",
+    link: "https://forkifycooks.netlify.app",
     thumbnail: "/courses/foodify.png",
   },
   {
     title: "Rivach",
-    link: "https://cursor.so",
+    link: "https://rivach.com/",
     thumbnail: "/courses/rivach2.png",
   },
   {
     title: "UbixLogix",
-    link: "https://userogue.com",
+    link: "https://ubiqlogix.com/",
     thumbnail: "/courses/ubiq.png",
   },
 
   {
     title: "Magnus",
-    link: "https://editorially.org",
+    link: "https://magnusdesigners.com/",
     thumbnail: "/courses/magnus.png",
   },
   {
     title: "Dashboard",
-    link: "https://editrix.ai",
+    link: "https://shoppy-dashboard-sync.netlify.app",
     thumbnail: "/courses/dashboard.png",
   },
   {
     title: "UbiqLogix2",
-    link: "https://app.pixelperfect.quest",
+    link: "https://ubiqlogix.com/",
     thumbnail: "/courses/ubiq2.png",
   },
   {
@@ -41,12 +41,12 @@ export const products = [
   },
   {
     title: "Foodify",
-    link: "https://gomoonbeam.com",
+    link: "https://forkifycooks.netlify.app",
     thumbnail: "/courses/foodify.png",
   },
   {
     title: "UbiqLogix2",
-    link: "https://editrix.ai",
+    link: "https://ubiqlogix.com/",
     thumbnail: "/courses/ubiq2.png",
   },
   
