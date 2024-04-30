@@ -1,0 +1,58 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Rivach",
+      "slug": "Building Apps and Websites",
+      "description": "MERN based Full-Stack Application with Bcrypt hashing and User Management with History Management",
+    
+      "isFeatured": true,
+      "github": "",
+      "livelink": "https://rivach.com/",
+      "image": "/courses/rivach2.png"
+    },
+    {
+      "id": 2,
+      "title": "UbiqLogix",
+      "slug": "Pioneering-solutions",
+      "description": "A website build with React and CMS that show cases the products and servieces provided by UbiqLogix. ",
+      "isFeatured": true,
+      "github": "",
+      "livelink": "https://ubiqlogix.com/",
+      "image": "/courses/ubiq.png"
+    },
+    {
+      "id": 3,
+      "title": "Magnus Designers",
+      "slug": "React with CMS",
+      "description": "React based site with Content Management System for Pojects and Architectures",
+     "github": "",
+      "livelink": "https://magnusdesigners.com/",
+      "isFeatured": true,
+      "image": "/courses/magnus.png"
+    },
+    {
+      "id": 4,
+      "title": "React Dashboard",
+      "slug": "ReactAdmin-Sales-Dashboard",
+      "description": "React and Sync Fusion admin dashboard site for sales reports and sub pages with category filtering systems",
+      "github": "",
+      "livelink": "https://shoppy-dashboard-sync.netlify.app",
+      "isFeatured": false,
+      "image": "/courses/dashboard.png"
+    },
+    
+    {
+      "id": 5,
+      "title": "Foodify",
+      "slug": "Food recipe site",
+      "description": "Javascript based food recipe Web Application using API and MVC Architecture",
+      "github": "",
+      "livelink": "",
+      "isFeatured": true,
+      "image": "/courses/foodify.png"
+    }
+    
+    
+  ]
+}
