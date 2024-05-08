@@ -8,10 +8,10 @@ import { Button } from "./ui/moving-border";
 function HeroSection() {
   return (
     <div className="h-auto md:h-[50rem] w-full rounded-md flex flex-col items-center justify-center relative overflow-hidden mx-auto py-10 md:py-0">
-      <Spotlight
+      {/* <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
-      />
+      /> */}
       <div className="p-4 relative z-10 w-full text-center">
 
         <h1 className="mt-20 md:mt-0 text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400" style={{background:"-webkit-linear-gradient(#6366f1, #0ea5e9)",WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent'}}>
@@ -38,7 +38,7 @@ function HeroSection() {
           <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
           <div className="-mt-4 -ml-8 z-10">
             <p className="mt-4 font-normal text-base md:text-xl text-neutral-300 max-w-lg mx-auto">
-              Frontend Developer | Web Developer by Passion, <br /> Designer by Interest
+              Frontend Developer | Web Developer by Passion, <br /> UI/UX Designer by Interest
             </p>
             <div className="mt-4">
               <Link href="https://drive.google.com/file/d/1ZxMydTvXvpCQFvzb1PG5H0d9qSooeR9n/view">
