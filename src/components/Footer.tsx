@@ -4,9 +4,8 @@ function Footer() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4 sm:px-6 lg:px-8">
         <div>
           <h2 className="text-white text-lg font-semibold mb-4">About Me</h2>
-          <p className="mb-4">
-            I am a highly enthusiast Frontend Developer with one years of experience
-            having worked as Web dev and having real-world experience in
+          <p className="mb-4" style={{fontSize:".9rem"}}>
+            I am a highly enthusiast Frontend Developer having real-world experience in
             Design layouts,User Experience(UX),User Interface(UI), Deployments etc
           </p>
         </div>
