@@ -30,7 +30,7 @@ function Footer() {
             </li>
             <li>
               <a
-                href="https://github.com/harshiltomar"
+                href="https://github.com/seelamvinaykumarreddy"
                 className="hover:text-white transition-colors duration-300"
               >
                 Github
