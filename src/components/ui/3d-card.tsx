@@ -139,7 +139,7 @@ export const CardItem = ({
       className={cn("w-fit transition duration-200 ease-linear", className)}
       {...rest}
     >
-      {children}
+      
     </Tag>
   );
 };
