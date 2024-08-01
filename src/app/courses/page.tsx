@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import courseData from "@/data/music_courses.json";
+import courseData from "@/data/projects_data.json";
 import { FaGithub } from "react-icons/fa";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { Boxes } from "@/components/ui/background-boxes";
@@ -45,8 +45,7 @@ function page() {
                     as="button"
                     className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white flex"
                   >
-                    <FaGithub className="mr-2" />
-                    Github Repo →
+                    
                   </CardItem>
                 </Link>
                 <Link href={course.livelink}>
