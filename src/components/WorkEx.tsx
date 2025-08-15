@@ -2,7 +2,9 @@
 import React from "react";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 import Image from "next/image";
-import rivach from './../../public/courses/rivach.png'
+import rivach from './../../public/courses/rivach.png';
+import sitek from './../../public/courses/sitek.jpeg'
+import ascent from './../../public/courses/ascent.jpeg';
 import { title } from "process";
 
 const content = [
