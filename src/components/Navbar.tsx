@@ -4,9 +4,12 @@ import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
+  const pathname = usePathname();
+  
   return (
     <div
       className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
@@ -17,6 +20,8 @@ function Navbar({ className }: { className?: string }) {
             setActive={setActive}
             active={active}
             item="Home"
+            currentPath={pathname}
+            href="/"
           ></MenuItem>
         </Link>
         <Link href={"/courses"}>
@@ -24,6 +29,8 @@ function Navbar({ className }: { className?: string }) {
             setActive={setActive}
             active={active}
             item="Projects"
+            currentPath={pathname}
+            href="/courses"
           ></MenuItem>
         </Link>
         <Link href="/contactus">
@@ -31,6 +38,8 @@ function Navbar({ className }: { className?: string }) {
             setActive={setActive}
             active={active}
             item="Contact Me"
+            currentPath={pathname}
+            href="/contactus"
           ></MenuItem>
         </Link>
       </Menu>

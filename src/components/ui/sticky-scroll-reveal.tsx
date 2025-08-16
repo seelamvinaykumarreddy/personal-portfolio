@@ -13,7 +13,9 @@ export const StickyScroll = ({
     title2:string;
     description1: string;
     description2: string;
-    description3: string;
+    description3?: string;
+    description4?: string;
+    description5?: string;
     techstack: string;
     content?: React.ReactNode | any;
   }[];
@@ -30,25 +32,37 @@ export const StickyScroll = ({
   const cardLength = content.length;
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const cardsBreakpoints = content.map((_, index) => index / cardLength);
-    const closestBreakpointIndex = cardsBreakpoints.reduce(
-      (acc, breakpoint, index) => {
-        const distance = Math.abs(latest - breakpoint);
-        if (distance < Math.abs(latest - cardsBreakpoints[acc])) {
-          return index;
-        }
-        return acc;
-      },
-      0
-    );
-    setActiveCard(closestBreakpointIndex);
+    // Simple and reliable scroll detection
+    if (cardLength === 0) return;
+    
+    // Calculate which card should be active based on scroll position
+    let newActiveCard = 0;
+    
+    if (latest <= 0.33) {
+      newActiveCard = 0; // First card
+    } else if (latest <= 0.66) {
+      newActiveCard = 1; // Second card
+    } else {
+      newActiveCard = 2; // Third card (Rivach)
+    }
+    
+    // Ensure we don't go beyond the last card
+    newActiveCard = Math.min(newActiveCard, cardLength - 1);
+    
+    // Debug logging
+    console.log(`Scroll: ${latest.toFixed(2)}, Active Card: ${newActiveCard}, Title: ${content[newActiveCard]?.title}`);
+    
+    // Only update if the card actually changed
+    if (newActiveCard !== activeCard) {
+      setActiveCard(newActiveCard);
+    }
   });
 
   const backgroundColors = [
     // "var(--slate-900)",
     "var(--black)",
     // "var(--neutral-900)",
-    "rgba(0, 0, 0, 0.05)",
+    "var(--black)",
   ];
   const linearGradients = [
     "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
@@ -95,6 +109,8 @@ export const StickyScroll = ({
                 - {item.description1}
                 <br />- {item.description2}
                 <br />- {item.description3}
+                {item.description4 && <><br />- {item.description4}</>}
+                {item.description5 && <><br />- {item.description5}</>}
                 <br />- Techstack: {item.techstack}
               </motion.p>
             </div>
@@ -107,7 +123,7 @@ export const StickyScroll = ({
           background: linearGradients[activeCard % linearGradients.length],
         }}
         className={cn(
-          "hidden lg:block h-60 w-80 rounded-md bg-white sticky top-2  overflow-hidden",
+          "hidden lg:block h-60 w-80 rounded-md bg-black sticky top-2  overflow-hidden",
           contentClassName
         )}
       >

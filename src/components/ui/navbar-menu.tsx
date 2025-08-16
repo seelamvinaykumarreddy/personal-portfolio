@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { cn } from "@/utils/cn";
 
 const transition = {
   type: "spring",
@@ -18,19 +19,41 @@ export const MenuItem = ({
   active,
   item,
   children,
+  currentPath,
+  href,
 }: {
   setActive: (item: string) => void;
   active: string | null;
   item: string;
   children?: React.ReactNode;
+  currentPath: string;
+  href: string;
 }) => {
+  const isActivePage = currentPath === href;
+  
   return (
     <div onMouseEnter={() => setActive(item)} className="relative ">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black hover:opacity-[.6] hover:text-skye-600 dark:text-white "  
+        className={cn(
+          "cursor-pointer relative pb-1 transition-all duration-300",
+          isActivePage 
+            ? "text-white dark:text-white" 
+            : "text-gray-300 dark:text-gray-300 hover:text-white dark:hover:text-white"
+        )}
       >
         {item}
+        {/* Blue underline - always visible for active page, visible on hover for others */}
+        <motion.div
+          className={cn(
+            "absolute bottom-0 left-0 h-0.5 bg-blue-500 transition-all duration-300",
+            isActivePage || active === item ? "w-full" : "w-0"
+          )}
+          initial={false}
+          animate={{
+            width: isActivePage || active === item ? "100%" : "0%"
+          }}
+        />
       </motion.p>
       {active !== null && (
         <motion.div
@@ -70,7 +93,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-full boder border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-6 "
+      className="relative rounded-full border border-transparent dark:bg-black/80 dark:border-white/[0.2] bg-black/80 shadow-input flex justify-center space-x-4 px-8 py-6 backdrop-blur-sm"
     >
       {children}
     </nav>
